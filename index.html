@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Audio Clips</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin: 10px 0;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="playAudio('audioPlayer1')">GET OUT</button>
+    <button onclick="playAudio('audioPlayer2')">GE-</button>
+
+    <audio id="audioPlayer1" src="getout.mp3"></audio>
+    <audio id="audioPlayer2" src="ge.mp3"></audio>
+
+    <script>
+        function playAudio(playerId) {
+            var audio = document.getElementById(playerId);
+            audio.play();
+        }
+    </script>
+
+</body>
+</html>
